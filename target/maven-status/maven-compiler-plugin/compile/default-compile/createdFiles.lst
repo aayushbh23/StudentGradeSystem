@@ -1,3 +1,5 @@
 cqu\studentgradesystem\Controller.class
+cqu\studentgradesystem\DataSet.class
+cqu\studentgradesystem\Student.class
 module-info.class
 cqu\studentgradesystem\App.class
