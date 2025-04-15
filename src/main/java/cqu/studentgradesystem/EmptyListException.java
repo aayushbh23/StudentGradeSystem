@@ -18,8 +18,7 @@ package cqu.studentgradesystem;
  * }
  * </pre>
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * @author Ayush Bhandari StudentID S12157470
  */
 public class EmptyListException extends RuntimeException {
 

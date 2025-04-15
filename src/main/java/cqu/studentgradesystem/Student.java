@@ -3,7 +3,7 @@ package cqu.studentgradesystem;
 /**
  * Represents a student's academic information including ID, name,
  * assessment marks and final grade.
- * <p>
+ * 
  * This is an immutable record that includes:
  * <ul>
  *     <li>Student ID</li>
@@ -11,12 +11,11 @@ package cqu.studentgradesystem;
  *     <li>Marks for three assessments</li>
  *     <li>Final grade (HD, D, C, P, F, SA, AF)</li>
  * </ul>
- * </p>
+ *
  * Also includes helper methods to calculate total marks and generate
  * a formatted string representation of the student's results.
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * @author Ayush Bhandari StudentID S12157470
  */
 public record Student(
     String id,

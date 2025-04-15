@@ -4,14 +4,14 @@ package cqu.studentgradesystem;
  * The {@code GradeAllocator} class is responsible for determining a student's final grade
  * based on marks from three assessments. It applies rules for grade boundaries,
  * minimum criteria, and supplementary eligibility.
- * <p>
+ *
  * The assessments are weighted as follows:
  * <ul>
  *     <li>Assessment 1: 20 marks</li>
  *     <li>Assessment 2: 30 marks</li>
  *     <li>Assessment 3: 50 marks</li>
  * </ul>
- * </p>
+ * 
  * Grades are assigned as per CQUniversity rules:
  * <ul>
  *     <li>{@code HD} - High Distinction (85–100)</li>
@@ -23,8 +23,7 @@ package cqu.studentgradesystem;
  *     <li>{@code AF} - Absent Fail (Total mark = 0)</li>
  * </ul>
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * @author Ayush Bhandari StudentID S12157470
  */
 public class GradeAllocator {
 
@@ -39,14 +38,14 @@ public class GradeAllocator {
 
     /**
      * Determines the final grade based on three assessment marks.
-     * <p>
+     * 
      * It applies the following logic:
      * <ul>
      *   <li>If total is 0, returns {@code "AF"} (Absent Fail)</li>
      *   <li>If minimum criteria not met, returns {@code "SA"} or {@code "F"}</li>
      *   <li>Otherwise, calculates based on total mark</li>
      * </ul>
-     * </p>
+     * 
      *
      * @param a1Mark mark for assessment 1
      * @param a2Mark mark for assessment 2

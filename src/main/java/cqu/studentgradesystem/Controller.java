@@ -16,8 +16,7 @@ import javafx.scene.control.TextField;
  * searching for a student by ID, filtering results by mark range, and showing class statistics.
  * </p>
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * @author Ayush Bhandari StudentID S12157470
  */
 public class Controller {
 

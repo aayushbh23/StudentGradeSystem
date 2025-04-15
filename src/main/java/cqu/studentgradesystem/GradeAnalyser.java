@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /**
  * The {@code GradeAnalyser} class provides functionality to analyze a data set of student records.
- * <p>
+ * 
  * It allows for:
  * <ul>
  *     <li>Searching for a student by ID</li>
@@ -15,12 +15,11 @@ import java.util.Arrays;
  *     <li>Validating mark range inputs</li>
  *     <li>Computing class statistics like maximum, minimum, average, and median marks</li>
  * </ul>
- * </p>
+ * 
  * The class uses both a list (for ordered access) and a hash table (for fast lookup).
  * It also defines two inner record types for encapsulating range and validation results.
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * @author Ayush Bhandari StudentID S12157470
  */
 public class GradeAnalyser {
 

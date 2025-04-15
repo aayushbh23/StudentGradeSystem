@@ -9,16 +9,15 @@ package cqu.studentgradesystem;
  * It is used as the data source for further analysis in the application.
  * </p>
  * 
- * <p>
+ * 
  * There are two constructors:
  * <ul>
  *   <li>A default constructor using hardcoded sample data</li>
  *   <li>A parameterized constructor that accepts external data</li>
  * </ul>
- * </p>
  * 
- * @author Ayush Bhandari  
- * @studentID S12157470
+ * 
+ * @author Ayush Bhandari StudentID S12157470
  */
 public class DataSet {
 
