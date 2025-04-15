@@ -17,14 +17,20 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("FXML"), 840, 480);
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("FXML.fxml"));
+        Parent root = loader.load();
+        
+        // construct the DataSet and GradeAnalyser objects
+        DataSet data = new DataSet();
+        GradeAnalyser analyser = new GradeAnalyser(data);
+        // get the reference to the controller object
+        Controller controller = loader.getController();
+        // inject the analyser into the controller
+        controller.inject(analyser);
+        
+        scene = new Scene(root, 840, 480);
         stage.setScene(scene);
         stage.show();
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
     }
 
     public static void main(String[] args) {

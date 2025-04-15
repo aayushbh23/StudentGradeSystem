@@ -4,3 +4,6 @@ cqu\studentgradesystem\GradeAllocator.class
 cqu\studentgradesystem\Student.class
 module-info.class
 cqu\studentgradesystem\App.class
+cqu\studentgradesystem\GradeAnalyser$Range.class
+cqu\studentgradesystem\GradeAnalyser.class
+cqu\studentgradesystem\GradeAnalyser$RangeValidationResponse.class

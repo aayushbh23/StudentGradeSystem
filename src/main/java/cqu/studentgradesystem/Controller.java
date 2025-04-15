@@ -1,5 +1,6 @@
 package cqu.studentgradesystem;
 
+import java.util.List;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,22 +12,38 @@ import javafx.scene.control.TextField;
 public class Controller{
 
     // Primary Controller Code
+    private GradeAnalyser GradeAnalyser;
+    
     @FXML
     private TextArea outputTextArea;
-    
     @FXML
-    private TextField findStudentsIdTextArea;
-    
+    private TextField findStudentsIdTextArea;    
     @FXML
-    private TextField resultsInMarkRangeFromTextArea;
-    
+    private TextField resultsInMarkRangeFromTextArea;    
     @FXML
-    private TextField resultsInMarkRangeToTextArea;
-    
+    private TextField resultsInMarkRangeToTextArea;        
+
+    public void inject(GradeAnalyser analyser){
+        this.GradeAnalyser = analyser;
+    }
     
     @FXML
     private void displayAllGrades(ActionEvent event){
-        this.outputTextArea.setText("Invalid Input");
+        if (this.GradeAnalyser == null) {
+            outputTextArea.setText("No data loaded.");
+            return;
+        }
+
+        List<Student> students = this.GradeAnalyser.getOrderedList();
+        if (students.isEmpty()) {
+            outputTextArea.setText("No student records available.");
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (Student s : students) {
+                sb.append(s.toString()).append("\n");
+            }
+            outputTextArea.setText(sb.toString());
+        }
     } 
     
     @FXML
