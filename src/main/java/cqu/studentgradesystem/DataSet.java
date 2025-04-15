@@ -9,6 +9,7 @@ package cqu.studentgradesystem;
  * @author 12157470
  */
 public class DataSet {
+    private final Student[] students;
     private final GradeAllocator grader = new GradeAllocator();
     private final String[][] studentDetails = {
         {"S20", "David", "Brown"},
@@ -20,7 +21,15 @@ public class DataSet {
         {20,28,44},
         {5,16,25}
     }; 
-    
+    public DataSet() {
+        this.students = loadFromTables(studentDetails, studentMarks);
+        sortByTotalMark();
+    }
+
+    public DataSet(String[][] details, int[][] marks) {
+        this.students = loadFromTables(details, marks);
+        sortByTotalMark();
+    }
     private Student[] loadFromTables(String[][]details, int[][] marks){
         int n = details.length; // number of students
         Student[] studentGrades = new Student[n];
@@ -34,5 +43,23 @@ public class DataSet {
             studentGrades[i] = r;
         }
         return studentGrades;
+    }
+    private void sortByTotalMark() {
+        //Implementation of Selection Sort
+        for (int i = 0; i < students.length - 1; i++) {
+            int maxIndex = i;
+            for (int j = i + 1; j < students.length; j++) {
+                if (students[j].total() > students[maxIndex].total()) {
+                    maxIndex = j;
+                }
+            }
+            Student temp = students[maxIndex];
+            students[maxIndex] = students[i];
+            students[i] = temp;
+        }
+    }
+
+    public Student[] getData() {
+        return students;
     }
 }

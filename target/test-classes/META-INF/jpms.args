@@ -1,0 +1,4 @@
+--patch-module
+cqu.studentgradesystem=_
+--add-reads
+cqu.studentgradesystem=ALL-UNNAMED
