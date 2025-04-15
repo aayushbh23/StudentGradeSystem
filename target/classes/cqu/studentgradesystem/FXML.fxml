@@ -1,4 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * FXML Layout for the Student Grade System GUI.
+ * <p>
+ * This file defines the visual structure and components of the JavaFX application.
+ * It connects to the {@code cqu.studentgradesystem.Controller} class for handling events.
+ * </p>
+ *
+ * <h2>Main Sections:</h2>
+ * <ul>
+ *   <li><b>Left Panel - Actions:</b> Buttons and input fields for interacting with student data</li>
+ *   <li><b>Right Panel - Output:</b> Displays query results and system responses</li>
+ * </ul>
+ *
+ * <h2>Components:</h2>
+ * <ul>
+ *   <li>{@code Label "Actions"} - Header for the action panel</li>
+ *   <li>{@code Label "Output"} - Header for the output display</li>
+ *   <li>{@code Button displayAllGrades} - Triggers the display of all student records</li>
+ *   <li>{@code Button findStudentId} - Searches for a student by ID</li>
+ *   <li>{@code Button resultsInMarkRange} - Displays students within a specific mark range</li>
+ *   <li>{@code Button displayStatistics} - Shows class-level statistics (max, min, avg, median)</li>
+ *   <li>{@code Button clearButton} - Clears all inputs and outputs</li>
+ *   <li>{@code Button exitButton} - Exits the application</li>
+ *   <li>{@code TextField findStudentsIdTextArea} - Input for student ID</li>
+ *   <li>{@code TextField resultsInMarkRangeFromTextArea} - Lower bound for mark range</li>
+ *   <li>{@code TextField resultsInMarkRangeToTextArea} - Upper bound for mark range</li>
+ *   <li>{@code TextArea outputTextArea} - Displays results or error messages</li>
+ *   <li>{@code Separator} - Visually separates the action panel from output panel</li>
+ * </ul>
+ *
+ * <h2>Controller Binding:</h2>
+ * This FXML is bound to the {@link cqu.studentgradesystem.Controller} class
+ * which manages all event handling for the buttons and input fields.
+ *
+ * @author Ayush Bhandari
+ * @studentID S12157470
+ */
+-->
+
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
