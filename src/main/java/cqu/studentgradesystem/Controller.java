@@ -10,11 +10,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 /**
- * Controller class for handling user interactions in the JavaFX Student Grade System GUI.
- * <p>
+ * Controller class for handling user interactions in the JavaFX Student Grade System.
  * Provides handlers for button actions such as displaying all student grades,
  * searching for a student by ID, filtering results by mark range, and showing class statistics.
- * </p>
  * 
  * @author Ayush Bhandari StudentID S12157470
  */
@@ -47,7 +45,15 @@ public class Controller {
     public void inject(GradeAnalyser analyser) {
         this.GradeAnalyser = analyser;
     }
-
+    
+    /**
+     * Constructs a {@code Controller} instance.
+     * This constructor performs no special initialization.
+     */
+    public Controller() {
+        // Default constructor
+    }
+    
     /**
      * Displays all student grades in the output text area.
      * Triggered by the "Display All Grades" button.
@@ -75,7 +81,7 @@ public class Controller {
     }
 
     /**
-     * Finds and displays a student's information based on the ID entered by the user.
+     * Finds and displays a student's information based on the ID.
      * Triggered by the "Find Student" button.
      * 
      * @param event the button click event

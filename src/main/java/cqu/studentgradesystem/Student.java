@@ -1,10 +1,10 @@
 package cqu.studentgradesystem;
 
 /**
- * Represents a student's academic information including ID, name,
+ * Represents a student's data including ID, name,
  * assessment marks and final grade.
  * 
- * This is an immutable record that includes:
+ * This is a record that includes:
  * <ul>
  *     <li>Student ID</li>
  *     <li>First and last name</li>
@@ -14,6 +14,14 @@ package cqu.studentgradesystem;
  *
  * Also includes helper methods to calculate total marks and generate
  * a formatted string representation of the student's results.
+ * 
+ * @param id        the unique identifier for the student
+ * @param firstName the student's first name
+ * @param lastName  the student's last name
+ * @param a1        the mark for assessment 1
+ * @param a2        the mark for assessment 2
+ * @param a3        the mark for assessment 3
+ * @param grade     the final grade assigned to the student
  * 
  * @author Ayush Bhandari StudentID S12157470
  */

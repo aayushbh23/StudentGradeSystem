@@ -10,26 +10,26 @@ import java.io.IOException;
 
 /**
  * Entry point for the Student Grade System JavaFX application.
- * <p>
  * This class is responsible for initializing the UI, loading the FXML layout,
  * creating the {@link DataSet} and {@link GradeAnalyser} objects, and injecting
  * the analyser into the controller for further interaction.
- * </p>
  * 
  * @author Ayush Bhandari StudentID S12157470
  */
 public class App extends Application {
 
     private static Scene scene;
-
+    
+    /**
+     * Constructs a {@code App} instance.
+     * This constructor performs no special initialization.
+     */
+    public App() {
+        // Default constructor
+    }
+    
     /**
      * Starts the JavaFX application.
-     * <p>
-     * This method loads the FXML layout, sets up the scene, constructs
-     * the {@link DataSet} and {@link GradeAnalyser} objects, and injects
-     * the analyser into the associated controller.
-     * </p>
-     *
      * @param stage the primary stage for this application, onto which
      *              the application scene can be set.
      * @throws IOException if the FXML file cannot be loaded.
@@ -58,7 +58,7 @@ public class App extends Application {
     /**
      * The main method. Launches the JavaFX application.
      *
-     * @param args the command line arguments
+     * @param args not used.
      */
     public static void main(String[] args) {
         System.out.println("Java version: " + System.getProperty("java.version"));

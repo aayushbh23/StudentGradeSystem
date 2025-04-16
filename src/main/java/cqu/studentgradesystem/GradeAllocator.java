@@ -12,14 +12,14 @@ package cqu.studentgradesystem;
  *     <li>Assessment 3: 50 marks</li>
  * </ul>
  * 
- * Grades are assigned as per CQUniversity rules:
+ * Grades are assigned as rules below:
  * <ul>
  *     <li>{@code HD} - High Distinction (85–100)</li>
  *     <li>{@code D}  - Distinction (75–84)</li>
  *     <li>{@code C}  - Credit (65–74)</li>
  *     <li>{@code P}  - Pass (50–64)</li>
  *     <li>{@code F}  - Fail (Below 50)</li>
- *     <li>{@code SA} - Supplementary Assessment (Fails minimum requirement on one component)</li>
+ *     <li>{@code SA} - Supplementary Assessment (Fails minimum requirement on one Assessment only)</li>
  *     <li>{@code AF} - Absent Fail (Total mark = 0)</li>
  * </ul>
  * 
@@ -35,7 +35,15 @@ public class GradeAllocator {
 
     /** Maximum mark for assessment 3 (out of 50). */
     private final int maxAssess3 = 50;
-
+    
+    /**
+     * Constructs a {@code GradeAllocator} instance.
+     * This constructor performs no special initialization.
+     */
+    public GradeAllocator() {
+        // Default constructor
+    }
+    
     /**
      * Determines the final grade based on three assessment marks.
      * 
@@ -96,10 +104,8 @@ public class GradeAllocator {
 
     /**
      * Determines if a student qualifies for a supplementary assessment.
-     * <p>
-     * A student qualifies if they failed exactly one component (scored below 50% in one assessment),
+     * A student qualifies if they failed only one assessment (scored below 50% in one assessment),
      * and passed the others.
-     * </p>
      *
      * @param a1 mark for assessment 1
      * @param a2 mark for assessment 2

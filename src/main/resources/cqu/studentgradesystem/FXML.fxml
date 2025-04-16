@@ -2,10 +2,8 @@
 <!--
 /**
  * FXML Layout for the Student Grade System GUI.
- * <p>
  * This file defines the visual structure and components of the JavaFX application.
  * It connects to the {@code cqu.studentgradesystem.Controller} class for handling events.
- * </p>
  *
  * <h2>Main Sections:</h2>
  * <ul>
@@ -27,7 +25,6 @@
  *   <li>{@code TextField resultsInMarkRangeFromTextArea} - Lower bound for mark range</li>
  *   <li>{@code TextField resultsInMarkRangeToTextArea} - Upper bound for mark range</li>
  *   <li>{@code TextArea outputTextArea} - Displays results or error messages</li>
- *   <li>{@code Separator} - Visually separates the action panel from output panel</li>
  * </ul>
  *
  * <h2>Controller Binding:</h2>

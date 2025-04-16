@@ -3,12 +3,9 @@ package cqu.studentgradesystem;
 /**
  * The {@code DataSet} class is responsible for managing and preparing a list of
  * {@link Student} objects based on predefined or user-supplied student details and marks.
- * <p>
  * This class calculates total marks, determines grades using a {@link GradeAllocator},
  * and sorts students in descending order by total marks using selection sort.
  * It is used as the data source for further analysis in the application.
- * </p>
- * 
  * 
  * There are two constructors:
  * <ul>
@@ -43,10 +40,8 @@ public class DataSet {
 
     /**
      * Default constructor.
-     * <p>
      * Loads student records using built-in sample data, calculates their grades,
      * and sorts them in descending order of total marks.
-     * </p>
      */
     public DataSet() {
         this.students = loadFromTables(studentDetails, studentMarks);
@@ -55,9 +50,7 @@ public class DataSet {
 
     /**
      * Parameterized constructor.
-     * <p>
      * Loads and processes student data from external arrays and sorts the list by total marks.
-     * </p>
      *
      * @param details a 2D array of student details (ID, first name, last name)
      * @param marks a 2D array of marks (3 assessments per student)
@@ -71,8 +64,8 @@ public class DataSet {
      * Converts raw data arrays into an array of {@link Student} objects and
      * assigns grades using the {@link GradeAllocator}.
      *
-     * @param details student personal data
-     * @param marks student marks data
+     * @param details student data
+     * @param marks student marks 
      * @return an array of fully initialized Student objects
      */
     private Student[] loadFromTables(String[][] details, int[][] marks) {
@@ -92,9 +85,7 @@ public class DataSet {
 
     /**
      * Sorts the array of students in descending order based on their total marks.
-     * <p>
      * Uses the selection sort algorithm.
-     * </p>
      */
     private void sortByTotalMark() {
         for (int i = 0; i < students.length - 1; i++) {

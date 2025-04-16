@@ -17,7 +17,7 @@ import java.util.Arrays;
  * </ul>
  * 
  * The class uses both a list (for ordered access) and a hash table (for fast lookup).
- * It also defines two inner record types for encapsulating range and validation results.
+ * It also defines two inner record types for range and validation results.
  * 
  * @author Ayush Bhandari StudentID S12157470
  */
@@ -26,7 +26,7 @@ public class GradeAnalyser {
     /** A list of students sorted in descending order of total marks. */
     private final List<Student> orderedList;
 
-    /** A hash table of students keyed by their student ID. */
+    /** A hash table of students by their student ID. */
     private final HashMap<String, Student> studentHashTable;
 
     /**
@@ -113,10 +113,8 @@ public class GradeAnalyser {
 
     /**
      * Validates user input strings representing mark bounds.
-     * <p>
      * Ensures that both fields are numeric, within range (0–100),
      * and that the lower bound is not greater than the upper bound.
-     * </p>
      *
      * @param lowerStr the input for the lower bound
      * @param upperStr the input for the upper bound
